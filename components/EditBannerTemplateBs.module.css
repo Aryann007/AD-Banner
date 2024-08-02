@@ -1,0 +1,270 @@
+
+.editBanner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  width: 80vw;
+  max-width: 500px;
+  height: 90vh;
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+.previewArea {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.previewImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+
+.content {
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+}
+
+.title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+
+.cta {
+  background-color: #FF6B00;
+  color: #e0e0e0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #FF8C00;
+}
+
+
+.editButton {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.editButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.2);
+}
+
+.editIcon {
+  width: 19px;
+  height: 19px;
+  fill: #333;
+}
+
+
+.input, .textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.input[type="file"] {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f8f9fa;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495057;
+  display: block;
+  width: 95%;
+}
+
+.input[type="file"]::-webkit-file-upload-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input[type="file"]::-moz-file-upload-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.doneButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.downloadButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .editBanner {
+    width: 85vw;
+    height: 85vh;
+    padding: 15px;
+  }
+
+  .header h2 {
+    font-size: 1.2em;
+  }
+
+  .banner {
+    padding: 15px;
+  }
+
+  .input, .textarea {
+    padding: 8px;
+  }
+
+  .doneButton, .downloadButton {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editBanner {
+    width: 95vw;
+    height: 95vh;
+    padding: 10px;
+  }
+
+  .header h2 {
+    font-size: 1em;
+  }
+
+  .banner {
+    padding: 10px;
+  }
+
+  .input, .textarea {
+    padding: 6px;
+  }
+
+  .doneButton, .downloadButton {
+    font-size: 12px;
+  }
+}
