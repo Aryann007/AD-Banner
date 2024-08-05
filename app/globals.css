@@ -17,4 +17,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px; 
   padding: 20px; 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e3c596f299c6d8ff198e0d067daac68c36e24b14
